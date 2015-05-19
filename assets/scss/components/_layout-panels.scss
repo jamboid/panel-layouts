@@ -77,6 +77,11 @@ $halfPanelWidth: 500px;
     padding-right:0;
     margin-right: em(20);
     width:calc((((#{$halfPanelWidth} * 2) * .6) - 1.25em) + (50vw - #{$halfPanelWidth}));
+
+    @include mq($bpChewie){
+      padding-left: 0;
+      width:calc(60vw - 1.25em);
+    }
   }
 
   .cp_PanelComponent--minor {
@@ -86,6 +91,10 @@ $halfPanelWidth: 500px;
     margin-left: em(20);
     padding-right:calc(50vw - #{$halfPanelWidth});
 
+    @include mq($bpChewie){
+      padding-right: 0;
+      width:calc(40vw - 1.25em);
+    }
   }
 
   &#right-margin {
@@ -94,6 +103,11 @@ $halfPanelWidth: 500px;
       width:calc(((#{$halfPanelWidth} * 2) * .4) - 1.25em);
       margin-left: em(20);
       margin-right:calc(50vw - #{$halfPanelWidth});
+
+      @include mq($bpChewie){
+        margin-right: 0;
+        width:calc(40vw - 1.25em);
+      }
     }
   }
 }
