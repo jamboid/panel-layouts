@@ -1,0 +1,99 @@
+/* != Layout - Panels */
+
+$halfPanelWidth: 500px;
+
+
+.fd_Panel {
+  max-width:100%;
+  margin-bottom: em(40);
+}
+
+/*
+.rg_PanelContent {
+  background:$clrGreen;
+  margin:0 calc(50vw - 165px) 0 0;
+  position: relative;
+  padding-left:calc(50vw - 535px);
+}
+*/
+
+.cp_PanelComponent {
+  background:$clrBlue;
+  position: relative;
+  width: auto;
+
+  .in {
+    margin:0;
+    padding:em(40);
+    color:$clrWhite;
+    width: 100%;
+    //background:rgba($clrWhite,0.1);
+  }
+}
+
+#panel-centered {
+  padding-left:calc(50vw - #{$halfPanelWidth});
+  padding-right:calc(50vw - #{$halfPanelWidth});
+}
+
+#panel-left-aligned {
+  padding-left:calc(50vw - 35%);
+  padding-right:calc(50vw - 35%);
+
+  .in {
+    max-width:100%;
+  }
+}
+
+// Panel with centred content, dynamic left-side padding to anchor it to the left side of the screen
+// and dynamic right-side margin to create a space to the right
+#panel-centered-left-aligned {
+  margin:0 calc(50vw - #{$halfPanelWidth}) 0 0;
+  padding-left:calc(50vw - #{$halfPanelWidth});
+  max-width:100%;
+}
+
+#panel-centered-left-aligned-right-margin {
+  width:calc((((#{$halfPanelWidth} * 2) * .6) - 1.25em) + (50vw - #{$halfPanelWidth}));
+  margin:0;
+  margin-right:calc((((#{$halfPanelWidth} * 2) * .4) + 1.25em) + (50vw - #{$halfPanelWidth}));
+  padding-left:calc(50vw - #{$halfPanelWidth});
+}
+
+/* !== Panel Pairs */
+
+.rg_PanelContent--pair {
+
+  display: flex;
+  flex-wrap:no-wrap;
+
+  .cp_PanelComponent {
+    display: flex;
+    align-items:stretch;
+  }
+
+  .cp_PanelComponent--major {
+    padding-left:calc(50vw - #{$halfPanelWidth});
+    padding-right:0;
+    margin-right: em(20);
+    width:calc((((#{$halfPanelWidth} * 2) * .6) - 1.25em) + (50vw - #{$halfPanelWidth}));
+  }
+
+  .cp_PanelComponent--minor {
+    padding-right:0;
+    padding-left:0;
+    width:calc((((#{$halfPanelWidth} * 2) * .4) - 1.25em) + (50vw - #{$halfPanelWidth}));
+    margin-left: em(20);
+    padding-right:calc(50vw - #{$halfPanelWidth});
+
+  }
+
+  &#right-margin {
+    .cp_PanelComponent--minor {
+      padding-right: 0;
+      width:calc(((#{$halfPanelWidth} * 2) * .4) - 1.25em);
+      margin-left: em(20);
+      margin-right:calc(50vw - #{$halfPanelWidth});
+    }
+  }
+}

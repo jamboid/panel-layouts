@@ -1,0 +1,99 @@
+/* != Scrollers  */
+/* NOTE: These are basic styles for the JS scroller module (Site.scroller.js) in the /assets/js folder */
+
+.cp_Scroller {
+    margin:20px 0;
+    position:relative;
+    height:100%;
+    overflow:hidden;
+
+  .in {
+      position:relative;
+      height:100%;
+      background:none;
+      overflow:hidden;
+
+  }
+
+  ul {
+    padding:0;
+    display:block;
+    overflow:scroll;
+    white-space: nowrap;
+    background:#ddd;
+  }
+
+  li {
+    width:25%;
+    position:relative;
+    margin-bottom: 0;
+    @include inline-block;
+    vertical-align: top;
+    @include mq($bpHan) {
+      width: 33.333%;
+    }
+    @include mq($bpLuke) {
+      width: 50%;
+    }
+    @include mq($bpArtoo) {
+      width: 100%;
+    }
+
+    .content {
+      margin:0;
+      padding:0;
+      display:block;
+      white-space:normal;
+    }
+
+    .image {
+      line-height:0;
+      margin:0;
+
+      img {
+        border: none;
+      }
+    }
+
+    .summary {
+      text-decoration:none;
+      position:absolute;
+      width:80%;
+      top:23px;
+      left:25px;
+      color:#fff;
+      display: none;
+    }
+  }
+
+  .scrollControls {
+    margin:10px 0 0;
+    padding:5px 0;
+    text-align:center;
+  }
+}
+
+.js {
+  .cp_Scroller {
+    ul {
+      overflow:hidden;
+    }
+  }
+}
+
+.actionButton {
+  @include basicButton($clrWhite, $clrBlue);
+}
+
+/*  IE7 styles */
+.ie7 {
+  .cp_Scroller {
+    ul {
+      li {
+        display:inline;
+        zoom:1;
+        white-space:nowrap;
+      }
+    }
+  }
+}

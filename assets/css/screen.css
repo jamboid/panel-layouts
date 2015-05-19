@@ -1,0 +1,1252 @@
+@charset "UTF-8";
+/*# sourceMappingURL=screen.css.map */
+/* !== Screen */
+/* NOTE: Master SASS file for screen display. Only add @import statements. No SASS/CSS code please */
+/*
+
+DEPENDENCIES
+============
+
+The following Tools are required to process this Sass framework correctly:
+
+* Sass 3.3
+* Autoprefixer
+
+*/
+/* Framework - Variables, Mixins, Functions, Resets, Placeholders */
+/* != Framework - ALL */
+/*
+NOTE: Imports all other files in the /framework folder
+      Files should be imported in the order indicated
+*/
+/* !== Global Settings */
+/* != Framework - Global Typography Settings */
+/* !== Typography */
+/* ! Font Families */
+/* ! Font Weights */
+/* ! Base Font Values - used as the default for things like basic paragraphs, lists, etc. */
+/* != Framework - Global Colour Settings */
+/*
+
+HOW TO USE COLOUR VARIABLES IN THIS SASS PROJECT
+------------------------------------------------
+
+There are a couple of options available to you:
+
+================
+1-STEP SYSTEM
+================
+
+1. Define your colour palette as a set of COLOUR-DESCRIPTIVE VARIABLES (e.g. $clrPaleBlue)
+2. Use these COLOUR-DESCRIPTIVE VARIABLES directly, throughout the project's other .scss files
+
+RESULT: Colours are presented in the code in a much more readable and meaningful format
+
+BEST FOR: Projects with one theme
+
+
+================
+2-STEP SYSTEM
+================
+
+1. Define your colour palette as a set of COLOUR-DESCRIPTIVE VARIABLES (e.g. $clrPaleBlue)
+2. Define a set of SEMANTIC-STRUCTURAL VARIABLES to use throughout your Sass files (e.g. $clrPageHeaderBackground)
+3. Set the SEMANTIC VARIABLES using the COLOUR-DESCRIPTIVE VARIABLES in this file only
+
+RESULT: Colours are managed in one location and colour changes will not require renaming variables throughout the set of Sass files
+
+BEST FOR: Projects that involve multiple themes or skins
+
+*/
+/* !== COLOUR-DESCRIPTIVE VARIABLES */
+/* ! Black to White */
+/* ! Blues */
+/* ! Reds */
+/* ! Greens */
+/* ! Oranges */
+/* !== Gradients */
+/* !=== SEMANTIC VARIABLES */
+/* NOTE: Use COLOUR-DESCRIPTIVE VARIABLES to define these. Don't add hex/rgb/rgba values directly */
+/* Document */
+/* Forms */
+/* != Global - Media Queries */
+/* !== Breakpoints */
+/*
+What are the parameter values for each Media Query?
+- Set these values without units, these'll be added in the mixin
+*/
+/*
+
+MQ Names - Star Wars Theme
+==========================
+
+Use the A-List names for main breakpoints and the B-List names for BPs for more specific rules and edge cases
+
+Small
+------------
+
+- A-List
+$bpYoda
+$bpArtoo
+
+- B-List
+$bpEwok
+$bpJawa
+
+Medium
+------------
+
+- A-List
+$bpLeia
+$bpLuke
+$bpHan
+$bpThreepio
+
+- B-List
+$bpLando
+$bpBoba
+$bpLobot
+
+
+Large
+------------
+
+- A-List
+$bpVader
+$bpChewie
+
+- B-List
+$bpJabba
+$bpWampa
+$bpRancor
+$bpSarlacc
+
+
+Very Large
+------------
+
+- A-List
+$bpATAT
+$bpStarDestroyer
+$bpDeathStar
+
+*/
+/* !== Resets */
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* != Drupal Reset */
+/* NOTE: Styles for resetting the Drupal system CSS */
+/* !== Navigation */
+ul.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul.menu li, ul.menu li.leaf {
+    padding: 0;
+    margin: 0;
+    background: none;
+    list-style: none; }
+
+/* !== Forms */
+.resizable-textarea .grippie {
+  display: none; }
+
+/* !== Modules */
+/* != Base Module - UNITS */
+/* CONVERT PIXELS TO EMS */
+/*
+Parameters: @pixels value (no units), optional @context value (no units) e.g. if you are calculating padding on an element that has a font size applied already.
+*/
+/* != Base Module - MATHS */
+/* !== Add 1 to a number */
+/* !== Subtract 1 from a number */
+/* != Framework Module - MEDIA QUERIES */
+/*
+ * @mixins
+ */
+/* !== Media Query mixin - includes Retina display */
+/* ! Framework Module - TYPOGRAPHY */
+/*
+ * @mixins
+ */
+/* !== Hide Text */
+/* != Framework Module - LAYOUT */
+/*  !== Fixed Width Layout */
+/* !== Set opacity with legacy browser fallbacks */
+/* != Placeholders - Layout - CLEARFIX */
+/* !== Modern Version - IE8+ */
+/*
+ * Placeholder version of the modern clearfix mixin
+ */
+[class*=fd_]:after, [class*=rg_]:after, .in:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* !== Legacy Version - IE6/7+ */
+/*
+ * Legacy support for inline-block in IE7 (maybe IE6)
+ */
+/* != Framework Module - GRID */
+/* !== Mixin for Ratio Grid Widths */
+/* != Framework Module - BUTTONS */
+/* !== Basic Button Style */
+/* Placeholder for buttonBase @mixin */
+input[type=submit],
+button {
+  padding: 6px 20px ;
+  padding: 0.375rem 1.25rem ;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: background 0.1s linear;
+          transition: background 0.1s linear;
+  cursor: pointer; }
+
+/* Mixin for Basic Button Styles */
+/* != Framework Module - Media */
+/* != Framework Module - Sprites */
+/*
+ * @variables
+ */
+/* Define the @1x and @2x Sprite files to use */
+/* Define the Sprite size - this is the @1x version's dimensions */
+/*
+ * @mixins
+ */
+/* Add basic Sprite CSS */
+/* Add CSS for sprite image as :before/:after content */
+/*
+ * @placeholders
+ */
+/* Provide a placeholder version of the Sprite File @mixin */
+/* Provide a placeholder version of the Sprite Base @mixin */
+/* !== Framework Module - STATES */
+/*
+ * @placeholders
+ */
+/* !== Hidden */
+.isHidden {
+  display: none; }
+
+/* !== Visible */
+.isVisible {
+  visibility: visible !important;
+  display: block !important; }
+
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+scss&plugins=line-highlight */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none; } }
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto; }
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em; }
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray; }
+
+.token.punctuation {
+  color: #999; }
+
+.namespace {
+  opacity: .7; }
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905; }
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690; }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5); }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a; }
+
+.token.function {
+  color: #DD4A68; }
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90; }
+
+.token.important {
+  font-weight: bold; }
+
+.token.entity {
+  cursor: help; }
+
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em; }
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prism’s padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre; }
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white; }
+
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em; }
+
+/* !== Global Rules */
+/* != Document */
+/* Rules for <html> and <body> go here */
+body {
+  background: #FAFAFA;
+  color: #000;
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333;
+  /* If media queries are supported... */ }
+  @media screen and (min-width: 56.3125em) {
+    body {
+      font-size: 125%; } }
+
+/* != Layout - Page  */
+/* !== Set viewport and initial zoom for browsers that support CSS viewport functionality */
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+/* !== Universal Border-Box Sizing  */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+
+/* != Layout - Grid  */
+/*
+NOTE: Styles to set the layout of the larger containers and regions in the template.
+      Uses the FUZZ framework hierarchy (https://github.com/jamboid/Fuzz)
+*/
+/* !== Fuzz Framework Levels */
+/* Basic styles for 5 levels of the framework */
+/* !=== Stages (.st) - Level 1 - Full Width Container(s) */
+[class*=st_] {
+  position: relative;
+  width: 100%; }
+
+.st_Header {
+  background: #333;
+  color: #fff; }
+
+.st_Page {
+  background: #fff;
+  color: #333; }
+
+.st_Footer {
+  padding: 1.25em;
+  background: #333;
+  color: #fff; }
+
+/* !=== Field (.fd) - Level 2 - Horizontal Page Sections (e.g. Header, Page Content, Footer) */
+/* NOTES: Set fixed/non-MQ width and then add a null MQ to set width for MQ-compatible browsers */
+[class*=fd_] {
+  clear: both;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.fd_PageHeader {
+  padding: 40px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* If media queries are supported... */ }
+  @media screen and (max-width: 48.125em) {
+    .fd_PageHeader {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+         -moz-box-orient: vertical;
+         -moz-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+/* !=== Region (.rg) - Level 3 - Significant Page Regions (e.g. Main Content, Sub Content) */
+.rg_MainContent {
+  float: right;
+  width: 75%; }
+
+.rg_SubContent {
+  float: left;
+  width: 25%; }
+
+/* !=== Group (.gp) - Level 4 - Semantic Groups of Components */
+[class*="gp_"] {
+  z-index: 0;
+  clear: both;
+  width: 100%; }
+
+/* !=== Component (.cp) - Self-Contained Functional Modules (e.g. Main Navigation, Carousel, Body Content) */
+[class*=cp_] {
+  width: 100%; }
+
+/* !=== Inner (.in) - Component Inner Container - Set Component styles and layout using this element */
+.in {
+  margin: 0 0 45px ;
+  margin: 0 0 2.8125rem ;
+  /* If media queries are supported... */
+  /* If media queries are supported... */ }
+  @media screen and (max-width: 56.25em) {
+    .in {
+      margin: 0 0 30px ;
+      margin: 0 0 1.875rem ; } }
+  @media screen and (max-width: 48.125em) {
+    .in {
+      margin: 0 0 30px ;
+      margin: 0 0 1.875rem ; } }
+
+/* !== Typography  */
+/* !== Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0; }
+
+.siteTitle {
+  margin: 0;
+  font-size: 24px ;
+  font-size: 1.5rem ;
+  font-weight: 300;
+  color: #428BCA; }
+
+.ttPage {
+  font-size: 28px ;
+  font-size: 1.75rem ;
+  font-weight: 300;
+  margin: 1em 0 0.5em; }
+
+/* !== Paragraphs */
+p {
+  margin: 0 0 1em;
+  font-size: 20px ;
+  font-size: 1.25rem ; }
+
+/* !== Lists */
+li, dt, dd {
+  font-size: 20px ;
+  font-size: 1.25rem ; }
+
+li {
+  margin: 0 0 1em; }
+
+li li {
+  font-size: 0.9em; }
+
+.cleanlist {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* !== Type Styles */
+strong {
+  font-weight: 700; }
+
+em {
+  font-style: italic; }
+
+/* !== Code */
+code, pre {
+  font-size: 16px ;
+  font-size: 1rem ;
+  font-family: "Consolas", monaco, monospace; }
+
+/* != Font Declarations */
+/* NOTE: Declare any @font-face rules here
+
+   Different weights of the same font family should be declared under a single name and font-weight and font-style set accordingly.
+
+   e.g.
+
+       @font-face{
+        font-family:"WebfontName";
+        src:url("/fonts/webfont_light.file");
+        font-weight:$light;
+      }
+
+      @font-face{
+        font-family:"WebfontName";
+        src:url("/fonts/webfont_normal.file");
+        font-weight:$regular;
+      }
+
+       @font-face{
+        font-family:"WebfontName";
+        src:url("/fonts/webfont_heavy.file");
+        font-weight:$bold;
+      }
+
+  This allows you to declare a single font-family and then use font-weight and font-style in the normal way, rather
+  than declaring a different font-family for each type style.
+
+
+
+@font-face{
+  font-family:"Example";
+  src:url("../fonts/Example_Normal.eot?#iefix");
+  src:url("../fonts/Example_Normal.eot?#iefix") format("eot"),
+      url("../fonts/Example_Normal.woff") format("woff"),
+      url("../fonts/Example_Normal.ttf") format("truetype"),
+      url("../fonts/Example_Normal.svg") format("svg");
+  font-weight:$normal;
+  font-style: normal;
+}
+
+*/
+/* != Atom - Typography - Headings */
+.heading--chewie {
+  font-size: 36px ;
+  font-size: 2.25rem ; }
+.heading--start {
+  font-size: 54px ;
+  font-size: 3.375rem ;
+  /* If media queries are supported... */ }
+  @media screen and (max-width: 48.125em) {
+    .heading--start {
+      font-size: 36px ;
+      font-size: 2.25rem ; } }
+.heading--han {
+  font-size: 28px ;
+  font-size: 1.75rem ;
+  margin-bottom: 0.5em;
+  opacity: 0.5; }
+.heading--finish {
+  font-size: 28px ;
+  font-size: 1.75rem ; }
+
+/* != Forms */
+/* !== Default Styles */
+fieldset {
+  margin: 0;
+  padding: 1.25em;
+  border: none;
+  background: #FAFAFA; }
+
+.formItem,
+.form-item {
+  margin: 0 0 1.25em; }
+
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 20px ;
+  font-size: 1.25rem ;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* Select Dropdown Styles */
+select {
+  -webkit-appearance: button; }
+
+input, select, textarea {
+  border: 1px solid #999;
+  padding: 0.3125em; }
+
+input[type=search] {
+  -webkit-appearance: none;
+  border: 1px solid #999;
+  padding-left: 0; }
+
+input[type=file] {
+  background: #efefef;
+  /* If media queries are supported... */ }
+  @media screen and (max-width: 30em) {
+    input[type=file] {
+      width: 100%; } }
+
+input[type=radio],
+input[type=checkbox] {
+  display: inline;
+  margin-right: 8px; }
+
+input[type=submit],
+button {
+  color: #fff;
+  background: -webkit-linear-gradient(#7eb0db, #428BCA);
+  background: linear-gradient(#7eb0db, #428BCA);
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none; }
+  input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active,
+  button:hover,
+  button:focus,
+  button:active {
+    color: #fff;
+    background: -webkit-linear-gradient(#428BCA, #2a6496);
+    background: linear-gradient(#428BCA, #2a6496); }
+
+label {
+  display: block;
+  font-weight: 700; }
+
+/* No label */
+.noLabel {
+  position: relative; }
+  .noLabel input {
+    margin-top: 1.25em; }
+  .noLabel label {
+    display: none; }
+
+/* !=== Validation */
+/* != Links / Buttons */
+/* !== Default Link Styles  */
+a {
+  color: #78a0da;
+  -webkit-tap-highlight-color: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease; }
+  a:hover, a:focus, a:active {
+    color: #bc4100; }
+
+/* !==  More/Action link */
+.button {
+  padding: 6px 20px ;
+  padding: 0.375rem 1.25rem ;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: background 0.1s linear;
+          transition: background 0.1s linear;
+  cursor: pointer;
+  color: #fff;
+  background: #87AE39; }
+  .button:hover, .button:focus, .button:active {
+    color: #fff;
+    background: #63802a; }
+
+.button--negative {
+  color: #fff;
+  background: #FF7979; }
+  .button--negative:hover, .button--negative:focus, .button--negative:active {
+    color: #fff;
+    background: #ff3c3c; }
+.button--positive {
+  color: #fff;
+  background: #87AE39; }
+  .button--positive:hover, .button--positive:focus, .button--positive:active {
+    color: #fff;
+    background: #63802a; }
+
+/* != Images */
+img {
+  max-width: 100%;
+  height: auto !important; }
+
+.image {
+  line-height: 0;
+  margin-bottom: 1.25em; }
+  .image[data-loading=click] {
+    cursor: pointer; }
+  .image.lazyLoader {
+    background: #efefef url(img/ajax_loader.gif) center center no-repeat;
+    padding-top: 50%; }
+    .image.lazyLoader img {
+      opacity: 0;
+      -webkit-transition: opacity .5s linear;
+              transition: opacity .5s linear; }
+  .image.imageLoaded {
+    padding-top: 0;
+    background-image: none; }
+  .image.imageDisplayed img {
+    opacity: 1; }
+  .image img {
+    padding: 0; }
+
+/* IE8 doesn't like max-width, so remove it and make sure any images have a correct width set */
+.ie8 img {
+  max-width: none !important; }
+.ie8 .image img {
+  width: 100%; }
+
+/* !== IE image rendering - improves appearence of resized images in IE  */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/* != Videos */
+.media {
+  position: relative;
+  padding-top: 75%;
+  height: 0;
+  overflow: hidden; }
+  .media iframe,
+  .media object,
+  .media embed,
+  .media video,
+  .media .placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .media .placeholder {
+    display: block; }
+
+.button {
+  padding: 6px 20px ;
+  padding: 0.375rem 1.25rem ;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: background 0.1s linear;
+          transition: background 0.1s linear;
+  cursor: pointer; }
+
+/* !== Components */
+/* != Prose Styles */
+/**
+ * NOTE: generic styles for RTE content. Create a class (e.g. prose) you
+ * can apply to any container that is going to contain this kind of content.
+ */
+.prose,
+.text--prose {
+  /* Paragraphs */
+  /* Lists */
+  /* Blockquotes */
+  /* Tables */ }
+  .prose section,
+  .text--prose section {
+    margin: 0;
+    padding: 0 0 1em; }
+    .prose section:last-child,
+    .text--prose section:last-child {
+      border: none; }
+  .prose h1,
+  .text--prose h1 {
+    font-size: 36px ;
+    font-size: 2.25rem ;
+    margin-bottom: 0.5em; }
+  .prose h2,
+  .text--prose h2 {
+    font-size: 24px ;
+    font-size: 1.5rem ;
+    margin: 0 0 0.5em; }
+  .prose h3,
+  .text--prose h3 {
+    font-size: 20px ;
+    font-size: 1.25rem ; }
+  .prose h4,
+  .text--prose h4 {
+    font-size: 18px ;
+    font-size: 1.125rem ; }
+  .prose h5,
+  .text--prose h5 {
+    font-size: 16px ;
+    font-size: 1rem ; }
+  .prose h6,
+  .text--prose h6 {
+    font-size: 14px ;
+    font-size: 0.875rem ; }
+  .prose p,
+  .text--prose p {
+    margin: 0 0 1em; }
+  .prose ul,
+  .text--prose ul {
+    list-style: disc; }
+  .prose ol,
+  .text--prose ol {
+    list-style: decimal; }
+  .prose ul, .prose ol,
+  .text--prose ul,
+  .text--prose ol {
+    margin: 0.625em 0 1.25em 1.5625em; }
+    .prose ul ul, .prose ul ol, .prose ol ul, .prose ol ol,
+    .text--prose ul ul,
+    .text--prose ul ol,
+    .text--prose ol ul,
+    .text--prose ol ol {
+      margin: 0.625em 0 0.625em 0.625em; }
+    .prose ul li, .prose ol li,
+    .text--prose ul li,
+    .text--prose ol li {
+      font-size: 20px ;
+      font-size: 1.25rem ;
+      margin-bottom: 0.5em; }
+      .prose ul li li, .prose ol li li,
+      .text--prose ul li li,
+      .text--prose ol li li {
+        font-size: 1em; }
+  .prose ol,
+  .text--prose ol {
+    margin-left: 40px; }
+  .prose dl,
+  .text--prose dl {
+    margin: 0.625em 0em 1.25em; }
+    .prose dl dt, .prose dl dd,
+    .text--prose dl dt,
+    .text--prose dl dd {
+      font-size: 20px ;
+      font-size: 1.25rem ; }
+    .prose dl dt,
+    .text--prose dl dt {
+      font-weight: 700;
+      margin-bottom: 0.625em; }
+    .prose dl dd,
+    .text--prose dl dd {
+      margin-bottom: 1em; }
+      .prose dl dd:last-child,
+      .text--prose dl dd:last-child {
+        margin-bottom: 0; }
+  .prose blockquote,
+  .text--prose blockquote {
+    font-size: 20px ;
+    font-size: 1.25rem ;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 1em;
+    border-left: 5px solid #efefef; }
+  .prose table,
+  .text--prose table {
+    max-width: 100% !important;
+    margin: 2em 0;
+    position: relative;
+    /* If media queries are supported... */ }
+    @media screen and (max-width: 48.125em) {
+      .prose table,
+      .text--prose table {
+        width: 100% !important; } }
+    .prose table th, .prose table td,
+    .text--prose table th,
+    .text--prose table td {
+      font-size: 20px ;
+      font-size: 1.25rem ;
+      line-height: 1.3;
+      text-align: center;
+      vertical-align: middle;
+      padding: 0.5em 0.75em; }
+      .prose table th p, .prose table th li, .prose table td p, .prose table td li,
+      .text--prose table th p,
+      .text--prose table th li,
+      .text--prose table td p,
+      .text--prose table td li {
+        font-size: 1em; }
+      .prose table th p:last-child, .prose table td p:last-child,
+      .text--prose table th p:last-child,
+      .text--prose table td p:last-child {
+        margin-bottom: 0; }
+    .prose table th,
+    .text--prose table th {
+      font-weight: 700; }
+
+/* != Brand Styles */
+/* !== Site Brand */
+.cp_Brand {
+  width: 25%;
+  /* If media queries are supported... */ }
+  .cp_Brand .in {
+    padding: 0 50px 0 0;
+    margin: 0; }
+  .cp_Brand .image {
+    padding-top: 8px; }
+    .cp_Brand .image img {
+      opacity: 0.4; }
+  @media screen and (max-width: 48.125em) {
+    .cp_Brand {
+      width: 100%;
+      text-align: center; }
+      .cp_Brand .in {
+        padding: 0 0 20px; } }
+
+/* !== Page Header Intro component */
+.cp_Intro--page {
+  width: 75%;
+  /* If media queries are supported... */ }
+  @media screen and (max-width: 48.125em) {
+    .cp_Intro--page {
+      width: 100%; } }
+
+/* != Page Footer components */
+/* !== Legal Info component */
+.cp_Legal p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* != Code Library  */
+.librarySection {
+  margin: 0 0 10vw; }
+
+/* !== Basic Stage Styles */
+.st_LibSection {
+  padding: 30px 20px 20px; }
+  .st_LibSection--start {
+    background: #87AE39;
+    color: #fff;
+    border-top: 3px solid #abcd66;
+    position: relative;
+    z-index: 20; }
+  .st_LibSection--content {
+    background: #FAFAFA;
+    position: relative;
+    z-index: 10;
+    padding: 50px 20px 40px; }
+  .st_LibSection--finish {
+    background: #FF7979;
+    color: #fff; }
+  .st_LibSection--bleed {
+    padding: 30px 0 20px; }
+
+/* !== Basic Field/Region Styles */
+.fd_Section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  max-width: 1280px;
+  margin: 0 auto; }
+  .fd_Section--start, .fd_Section--finish, .fd_Section--bleed {
+    max-width: 1280px;
+    margin: 0 auto; }
+  .fd_Section--content .rg_Meta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.rg_Main {
+  width: 75%;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+     -moz-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  /* If media queries are supported... */ }
+  @media screen and (max-width: 48.125em) {
+    .rg_Main {
+      -webkit-box-ordinal-group: 1;
+      -webkit-order: 0;
+         -moz-box-ordinal-group: 1;
+          -ms-flex-order: 0;
+              order: 0; } }
+  .rg_Main .in {
+    margin-bottom: 0; }
+
+.rg_Meta {
+  width: 25%;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+     -moz-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+/* If media queries are supported... */
+@media screen and (max-width: 48.125em) {
+  .fd_Section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+  .rg_Main,
+  .rg_Meta {
+    width: 100%; } }
+/* !== Intro Components */
+.cp_LibSectionTitle .in {
+  padding-top: 10px;
+  margin-bottom: 1em; }
+
+.cp_LibSectionIntro .in {
+  margin-bottom: 0; }
+
+/* !== Notes Component */
+.cp_Notes .in {
+  padding-right: 50px;
+  margin-bottom: 0; }
+  .cp_Notes .in p, .cp_Notes .in li {
+    font-size: 16px ;
+    font-size: 1rem ;
+    opacity: 0.7; }
+
+/* !== Related Files */
+.cp_LibRelatedFiles .in {
+  margin-bottom: 0; }
+
+.relatedFiles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px; }
+  .relatedFiles dt {
+    width: 150px; }
+  .relatedFiles dd {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+       -moz-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-left: 30px; }
+
+.cp_Documentation h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  float: left; }
+.cp_Documentation a.button {
+  float: right; }
+.cp_Documentation section {
+  clear: both;
+  margin-bottom: 40px;
+  position: relative; }
+
+/* != Layout - Panels */
+.fd_Panel {
+  max-width: 100%;
+  margin-bottom: 2.5em; }
+
+/*
+.rg_PanelContent {
+  background:$clrGreen;
+  margin:0 calc(50vw - 165px) 0 0;
+  position: relative;
+  padding-left:calc(50vw - 535px);
+}
+*/
+.cp_PanelComponent {
+  background: #428BCA;
+  position: relative;
+  width: auto; }
+  .cp_PanelComponent .in {
+    margin: 0;
+    padding: 2.5em;
+    color: #fff;
+    width: 100%; }
+
+#panel-centered {
+  padding-left: calc(50vw - 500px);
+  padding-right: calc(50vw - 500px); }
+
+#panel-left-aligned {
+  padding-left: calc(50vw - 35%);
+  padding-right: calc(50vw - 35%); }
+  #panel-left-aligned .in {
+    max-width: 100%; }
+
+#panel-centered-left-aligned {
+  margin: 0 calc(50vw - 500px) 0 0;
+  padding-left: calc(50vw - 500px);
+  max-width: 100%; }
+
+#panel-centered-left-aligned-right-margin {
+  width: calc((((500px * 2) * .6) - 1.25em) + (50vw - 500px));
+  margin: 0;
+  margin-right: calc((((500px * 2) * .4) + 1.25em) + (50vw - 500px));
+  padding-left: calc(50vw - 500px); }
+
+/* !== Panel Pairs */
+.rg_PanelContent--pair {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: no-wrap;
+      -ms-flex-wrap: no-wrap;
+          flex-wrap: no-wrap; }
+  .rg_PanelContent--pair .cp_PanelComponent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+       -moz-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .rg_PanelContent--pair .cp_PanelComponent--major {
+    padding-left: calc(50vw - 500px);
+    padding-right: 0;
+    margin-right: 1.25em;
+    width: calc((((500px * 2) * .6) - 1.25em) + (50vw - 500px)); }
+  .rg_PanelContent--pair .cp_PanelComponent--minor {
+    padding-right: 0;
+    padding-left: 0;
+    width: calc((((500px * 2) * .4) - 1.25em) + (50vw - 500px));
+    margin-left: 1.25em;
+    padding-right: calc(50vw - 500px); }
+  .rg_PanelContent--pair#right-margin .cp_PanelComponent--minor {
+    padding-right: 0;
+    width: calc(((500px * 2) * .4) - 1.25em);
+    margin-left: 1.25em;
+    margin-right: calc(50vw - 500px); }
+
+/* !== Extras */
+/* != Utilities */
+/* !== Display State Classes  */
+/* != Shame */
+/* NOTE: All quick-and-dirty fixes go in here, as long as you promise to properly integrate them later! */
+/* !== Vendor */
+
+/*# sourceMappingURL=screen.css.map */

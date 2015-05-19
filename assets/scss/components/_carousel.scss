@@ -1,0 +1,89 @@
+/* != Carousel */
+
+.cp_Carousel {
+  .in {
+
+  }
+
+  .slide {
+    display: none;
+
+    &:first-child {
+      display: block;
+
+    }
+
+
+    a {
+      display: block;
+    }
+  }
+
+  .image {
+    img {
+      border:none;
+    }
+  }
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .scrollControls {
+    margin:10px 0 0;
+    padding:5px 0;
+    text-align:center;
+  }
+
+}
+
+/* JS states */
+
+.js {
+  .cp_Carousel {
+    .slides {
+      position: relative;
+      width: 100%;
+      transition:height 0.5s linear;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    &--static {
+      .slides {
+        height:0; // gets overriden by inline CSS applied by script
+        padding-top: 66%;
+      }
+
+      .slide {
+        position: absolute;
+        top:0;
+        left:0;
+
+        &.current {
+          display: block;
+        }
+
+        &.next {
+          z-index:100;
+        }
+      }
+    }
+
+    &--scroll {
+      .slide {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        white-space:normal;
+        width: 100%;
+      }
+    }
+  }
+}

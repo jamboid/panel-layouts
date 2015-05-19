@@ -1,0 +1,70 @@
+/* != Global - Media Queries */
+
+/* !== Breakpoints */
+
+/*
+What are the parameter values for each Media Query?
+- Set these values without units, these'll be added in the mixin
+*/
+$bpArtoo: 480;
+$bpLeia: 610;
+$bpLuke: 770;
+$bpHan: 900;
+$bpChewie: 1000;
+
+/*
+
+MQ Names - Star Wars Theme
+==========================
+
+Use the A-List names for main breakpoints and the B-List names for BPs for more specific rules and edge cases
+
+Small
+------------
+
+- A-List
+$bpYoda
+$bpArtoo
+
+- B-List
+$bpEwok
+$bpJawa
+
+Medium
+------------
+
+- A-List
+$bpLeia
+$bpLuke
+$bpHan
+$bpThreepio
+
+- B-List
+$bpLando
+$bpBoba
+$bpLobot
+
+
+Large
+------------
+
+- A-List
+$bpVader
+$bpChewie
+
+- B-List
+$bpJabba
+$bpWampa
+$bpRancor
+$bpSarlacc
+
+
+Very Large
+------------
+
+- A-List
+$bpATAT
+$bpStarDestroyer
+$bpDeathStar
+
+*/

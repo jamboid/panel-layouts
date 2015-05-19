@@ -1,0 +1,31 @@
+/* != Links / Buttons */
+
+/* !== Default Link Styles  */
+a {
+  color:$clrLightBlue;
+  -webkit-tap-highlight-color: $clrNone;
+  -webkit-tap-highlight-color: $clrInvsibile;
+  transition:all .2s ease;
+
+  &:hover, &:focus, &:active {
+    color:$clrOrange;
+  }
+}
+
+/* !==  More/Action link */
+
+.button {
+  @include buttonBase;
+  @include basicButton($clrWhite, $clrGreen);
+}
+
+// Colour variants
+.button {
+  &--negative {
+    @include basicButton($clrWhite, $clrRed);
+  }
+
+  &--positive {
+    @include basicButton($clrWhite, $clrGreen);
+  }
+}

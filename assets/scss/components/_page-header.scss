@@ -1,0 +1,40 @@
+/* != Brand Styles */
+
+
+/* !== Site Brand */
+.cp_Brand {
+  width: 25%;
+
+  .in {
+    padding:0 50px 0 0;
+    margin:0;
+  }
+
+  .image {
+    padding-top: 8px;
+
+    img {
+      opacity:0.4;
+    }
+  }
+
+  @include mq($bpLuke){
+    width: 100%;
+    text-align: center;
+
+    .in {
+      padding:0 0 20px;
+    }
+  }
+}
+
+/* !== Page Header Intro component */
+
+
+.cp_Intro--page {
+  width: 75%;
+
+  @include mq($bpLuke){
+    width: 100%;
+  }
+}

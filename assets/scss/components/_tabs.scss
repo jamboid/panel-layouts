@@ -1,0 +1,71 @@
+/* !== Tabs */
+
+/* !== Base Styles */
+
+[data-tabs=plugin] {
+  @include rem(margin, 0 45px 45px);
+
+  @include mq($bpHan) {
+    @include rem(margin, 0 30px 30px);
+  }
+
+  @include mq($bpLuke){
+    @include rem(margin, 0 20px 30px);
+  }
+
+  width:auto;
+}
+
+[data-tabs=panel] {
+  display: none;
+
+  &.current {
+    display: block;
+    border:3px solid $clrGreen;
+    border-top: none;
+  }
+
+  .in {
+    margin:0;
+    padding:em(20);
+  }
+}
+
+[data-tabs=controls] {
+  .tabs {
+    display: table;
+    width: 100%;
+    border:3px solid $clrGreen;
+    border-bottom: none;
+  }
+
+  a {
+    text-decoration: none;
+    color:$clrWhite;
+  }
+
+  @include mq($bpLeia){
+    display: block;
+  }
+}
+
+[data-tabs=control] {
+  display:table-cell;
+  text-align: center;
+  padding:em(20);
+
+  background:$clrGreen;
+
+  &.current {
+    background:$clrWhite;
+    color:$clrGreen;
+  }
+
+  @include mq($bpLeia){
+    display: none;
+
+    &.current {
+      display: block;
+    }
+  }
+}

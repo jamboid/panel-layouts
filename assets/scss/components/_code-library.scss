@@ -1,0 +1,141 @@
+/* != Code Library  */
+
+
+.librarySection {
+  margin:0 0 10vw;
+}
+
+/* !== Basic Stage Styles */
+
+.st_LibSection {
+  padding:30px 20px 20px;
+
+
+  &--start {
+    background:$clrGreen;
+    color:$clrWhite;
+    border-top:3px solid lighten($clrGreen,15);
+    position: relative;
+    z-index: 20;
+  }
+
+  &--content {
+    background:$clrOffWhite;
+    position: relative;
+    z-index: 10;
+    padding:50px 20px 40px;
+  }
+
+  &--finish {
+    background:$clrRed;
+    color:$clrWhite;
+  }
+
+  &--bleed {
+    padding:30px 0 20px;
+  }
+}
+
+/* !== Basic Field/Region Styles */
+
+.fd_Section {
+  display:flex;
+  padding:0;
+  max-width: 1280px;
+  margin:0 auto;
+
+  &--start,
+  &--finish,
+  &--bleed {
+    max-width:1280px;
+    margin:0 auto;
+  }
+
+  &--content {
+    .rg_Meta {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.rg_Main {
+  width: 75%;
+  order:2;
+
+  @include mq($bpLuke){
+    order:0;
+  }
+
+  .in {
+    margin-bottom: 0;
+  }
+}
+
+.rg_Meta {
+  width: 25%;
+  order:1;
+}
+
+@include mq($bpLuke){
+
+  .fd_Section {
+    flex-direction:column;
+  }
+
+  .rg_Main,
+  .rg_Meta {
+    width: 100%;
+  }
+}
+
+/* !== Intro Components */
+.cp_LibSectionTitle {
+  .in {
+    padding-top: 10px;
+    margin-bottom:1em;
+  }
+}
+
+.cp_LibSectionIntro {
+  .in {
+    margin-bottom: 0;
+  }
+}
+
+/* !== Notes Component */
+.cp_Notes {
+  .in {
+    padding-right: 50px;
+    margin-bottom: 0;
+
+    p,li {
+      @include rem(font-size,16px);
+      opacity: 0.7;
+    }
+  }
+}
+
+
+/* !== Related Files */
+.cp_LibRelatedFiles {
+  .in {
+    margin-bottom: 0;
+  }
+}
+
+.relatedFiles {
+  display:flex;
+  padding-bottom: 10px;
+
+
+  dt {
+    width: 150px;
+  }
+
+  dd {
+    flex-grow:1;
+    padding-left: 30px;
+  }
+}

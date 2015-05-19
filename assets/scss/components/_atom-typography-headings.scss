@@ -1,0 +1,26 @@
+/* != Atom - Typography - Headings */
+
+
+.heading {
+  &--chewie {
+    @include rem(font-size, 36px);
+  }
+
+  &--start {
+    @include rem(font-size, 54px);
+
+    @include mq($bpLuke){
+      @include rem(font-size, 36px);
+    }
+  }
+
+  &--han {
+    @include rem(font-size, 28px);
+    margin-bottom:  0.5em;
+    opacity:0.5;
+  }
+
+  &--finish {
+    @include rem(font-size, 28px);
+  }
+}

@@ -1,0 +1,64 @@
+/* != Grid Modules Styles */
+
+.rg_GridModule {
+  display: table;
+  width: 100%;
+  @include mq($bpLeia) {
+    display: block;
+  }
+}
+
+.gp_Grid {
+  display: table-cell;
+  width: 50%;
+  vertical-align: top;
+  background:$clrWhite;
+  @include mq($bpLeia) {
+    display: block;
+    width: 100%;
+  }
+
+  [class*="cp_"] {
+    .in {
+      margin: 0;
+    }
+  }
+
+  .image {
+    margin-bottom: 0;
+    img {
+      border:none;
+      width: 100%;
+    }
+  }
+
+  // Flex image variant
+  &--flex-image {
+    background:url("http://placehold.it/600x1000/333333/CCFF49/&text=Portrait Image") bottom left no-repeat;
+    background-size:cover;
+    vertical-align:top;
+
+    @include mq($bpArtoo){
+      display: none;
+    }
+  }
+}
+
+
+
+.gp_TopGrid {
+  background:$clrWhite url(img/top_image_back.png) bottom center repeat-y;
+  background-size:contain;
+}
+
+.gp_BottomGrid {
+  background:$clrWhite url(img/bottom_image_back.png) bottom center repeat-y;
+  background-size:contain;
+}
+
+.cp_GridCopy {
+  .in {
+    padding:em(20);
+    background:$clrWhite;
+  }
+}

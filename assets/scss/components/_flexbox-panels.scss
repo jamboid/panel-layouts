@@ -1,0 +1,32 @@
+/* != Flexbox Panel Components */
+
+/* !== Region Container */
+.rg_FlexPanelContent {
+  @if $legacy {
+    display:table;
+  } @else {
+    display:flex;
+  }
+}
+
+
+/* !== Components */
+.cp_FlexComponent {
+
+  @if $legacy {
+    display:table-cell;
+  }
+
+  background:$clrGreen;
+  color:$clrWhite;
+
+  &:nth-child(2n) {
+    background:lighten($clrGreen,5);
+  }
+
+  .in {
+    margin:0;
+    padding:em(40);
+    color:$clrWhite;
+  }
+}
